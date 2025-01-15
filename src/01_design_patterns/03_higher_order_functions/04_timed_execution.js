@@ -20,6 +20,19 @@ console.log(output); // Output should be something like { result: 7, time: 0.123
 
 function timeExecution(fn) {
     // Your code here
+    return func = (...args)=> {
+        // Start time
+        const start = new Date()
+        // Execute function
+        const result = fn(...args)
+        // End time
+        const end = new Date()
+        // Difference in start and end
+        const time = end - start
+
+        return {result, time}
+
+    }
 }
 
 

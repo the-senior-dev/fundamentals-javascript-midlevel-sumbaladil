@@ -14,6 +14,16 @@ either all at once or one at a time. For example:
 // HINT: You will need to use recursion to solve this problem!
 function curry(fn) {
     // Your code here
+    return curriedFunc = (...args) => {
+        // check if the number of arguments passed args is greater than or equal to the number of arguments the function(fn) expects
+        if(args.length >= fn.length){
+            return fn(...args)
+        }else{
+            return (...arg2) => {
+                return curriedFunc(...args, ...arg2)
+            }
+        }
+    }
 }
   
 

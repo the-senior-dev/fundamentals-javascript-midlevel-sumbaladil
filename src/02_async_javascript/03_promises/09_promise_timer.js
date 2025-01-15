@@ -12,9 +12,12 @@ Requirements:
 
 function promiseTimer(delay) {
     // Implement this function
-    return new Promise((resolve, reject) => {
-        // Your code here
-    });
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                 resolve("Done!")
+            }, delay)
+        })
+    
 }
 
 module.exports = promiseTimer;
